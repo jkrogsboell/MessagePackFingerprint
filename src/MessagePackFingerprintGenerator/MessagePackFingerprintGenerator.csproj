@@ -6,17 +6,29 @@
         <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>
         <WarningsAsErrors>true</WarningsAsErrors>
-        <Version>1.0.0</Version>
-        <Authors>Jonas Krogsbøll</Authors>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
+        <!-- NuGet metadata -->
+        <PackageId>MessagePack.FingerprintGenerator</PackageId>
+        <Version>1.0.0-preview1</Version>
+        <Authors>Jonas Krogsbøll</Authors>
+        <Description>Source generator for computing MessagePack fingerprints and tracking used types across assemblies.</Description>
+        <PackageTags>MessagePack;SourceGenerator;Roslyn;Fingerprint;Serialization</PackageTags>
+        <RepositoryUrl>https://github.com/jkrogsboell/MessagePackFingerprint</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/jkrogsboell/MessagePackFingerprint</PackageProjectUrl>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <EnableSourceLink>true</EnableSourceLink>
+
+        <!-- Analyzer-specific -->
         <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
         <IsRoslynComponent>true</IsRoslynComponent>
-        <PackageLicenseExpression>MIT</PackageLicenseExpression>
-        <RepositoryUrl>https://github.com/jkrogsboell/MessagePackFingerprint</RepositoryUrl>
 
         <RootNamespace>MessagePackFingerprintGenerator</RootNamespace>
-        <PackageId>MessagePack.FingerprintGenerator</PackageId>
     </PropertyGroup>
 
     <ItemGroup>

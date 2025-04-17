@@ -1,0 +1,28 @@
+name: Release to Nuget
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+          source-url: https://api.nuget.org/v3/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.NUGET_TOKEN}}
+      - name: Build
+        run: dotnet build --configuration Release PrimaryCtorAndRecordAnalyzer
+        working-directory: ./PrimaryCtorAndRecordTypes
+      - name: Create NuGet package
+        run: dotnet pack -c Release PrimaryCtorAndRecordAnalyzer /p:Version=${{ github.event.release.tag_name }} /p:PackageReleaseNotes="See https://github.com/jkrogsboell/PctorAndRecordRoslynAnalyzer/releases/tag/${{ github.event.release.tag_name }}" /p:RepositoryUrl="https://github.com/jkrogbsoell/PctorAndRecordRoslynAnalyzer"
+        working-directory: ./PrimaryCtorAndRecordTypes
+      - name: Publish the package to Nuget
+        run: dotnet nuget push PrimaryCtorAndRecordAnalyzer/bin/Release/PrimaryCtorAndRecord.Analyzers.${{ github.event.release.tag_name }}.nupkg --api-key ${{secrets.NUGET_TOKEN}} --source https://api.nuget.org/v3/index.json
+        working-directory: ./PrimaryCtorAndRecordTypes
