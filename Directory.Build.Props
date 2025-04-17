@@ -1,0 +1,9 @@
+<Project>
+    <ItemGroup>
+        <CompilerVisibleProperty Include="MessagePackFingerprintReferencedWithGenerator" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <MessagePackFingerprintReferencedWithGenerator>MessagePackApp,LibraryWithGenerator</MessagePackFingerprintReferencedWithGenerator>
+    </PropertyGroup>
+</Project>

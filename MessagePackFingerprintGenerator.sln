@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePackFingerprintGenerator", "src\MessagePackFingerprintGenerator\MessagePackFingerprintGenerator.csproj", "{07C42273-EB0D-4373-827B-459D38C3B776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePackFingerprintGenerator.Tests", "tests\MessagePackFingerprintGenerator.Tests\MessagePackFingerprintGenerator.Tests.csproj", "{3BCE85A5-6E1D-42FE-ACD6-02D5F41AF373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagePackApp", "demo\MessagePackApp\MessagePackApp.csproj", "{8C70363E-9197-4709-9944-E58191B940B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWithGenerator", "demo\LibraryWithGenerator\LibraryWithGenerator.csproj", "{579CBD63-0AC5-492D-AF9B-62871A2CE0A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWithoutGenerator", "demo\LibraryWithoutGenerator\LibraryWithoutGenerator.csproj", "{A3E673A8-02D8-472B-AAA3-806150908458}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07C42273-EB0D-4373-827B-459D38C3B776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07C42273-EB0D-4373-827B-459D38C3B776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07C42273-EB0D-4373-827B-459D38C3B776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07C42273-EB0D-4373-827B-459D38C3B776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C70363E-9197-4709-9944-E58191B940B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C70363E-9197-4709-9944-E58191B940B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C70363E-9197-4709-9944-E58191B940B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C70363E-9197-4709-9944-E58191B940B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BCE85A5-6E1D-42FE-ACD6-02D5F41AF373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BCE85A5-6E1D-42FE-ACD6-02D5F41AF373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BCE85A5-6E1D-42FE-ACD6-02D5F41AF373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BCE85A5-6E1D-42FE-ACD6-02D5F41AF373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579CBD63-0AC5-492D-AF9B-62871A2CE0A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579CBD63-0AC5-492D-AF9B-62871A2CE0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579CBD63-0AC5-492D-AF9B-62871A2CE0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579CBD63-0AC5-492D-AF9B-62871A2CE0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3E673A8-02D8-472B-AAA3-806150908458}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E673A8-02D8-472B-AAA3-806150908458}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E673A8-02D8-472B-AAA3-806150908458}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E673A8-02D8-472B-AAA3-806150908458}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

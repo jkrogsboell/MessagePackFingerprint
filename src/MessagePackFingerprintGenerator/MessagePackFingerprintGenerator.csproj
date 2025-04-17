@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <IsPackable>false</IsPackable>
+        <Nullable>enable</Nullable>
+        <LangVersion>latest</LangVersion>
+        <WarningsAsErrors>true</WarningsAsErrors>
+        <Version>1.0.0</Version>
+        <Authors>Jonas Krogsbøll</Authors>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+        <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+        <IsRoslynComponent>true</IsRoslynComponent>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/jkrogsboell/MessagePackFingerprint</RepositoryUrl>
+
+        <RootNamespace>MessagePackFingerprintGenerator</RootNamespace>
+        <PackageId>MessagePack.FingerprintGenerator</PackageId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.4.0"/>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.4.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../../LICENSE" Pack="true" PackagePath="FILES" />
+        <None Include="../../README.md" Pack="true" PackagePath="FILES" />
+    </ItemGroup>
+</Project>
