@@ -9,7 +9,7 @@
 
         <!-- NuGet metadata -->
         <PackageId>MessagePack.FingerprintGenerator</PackageId>
-        <Version>1.0.0-preview2</Version>
+        <Version>1.0.0-preview3</Version>
         <Authors>Jonas Krogsbøll</Authors>
         <Description>Source generator for computing MessagePack fingerprints and tracking used types across assemblies.</Description>
         <PackageTags>MessagePack;SourceGenerator;Roslyn;Fingerprint;Serialization</PackageTags>
@@ -17,7 +17,6 @@
         <RepositoryType>git</RepositoryType>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageProjectUrl>https://github.com/jkrogsboell/MessagePackFingerprint</PackageProjectUrl>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -40,8 +39,17 @@
         <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.4.0"/>
     </ItemGroup>
 
+    <PropertyGroup>
+        <PackageReadmeFile>FILES/README.md</PackageReadmeFile>
+    </PropertyGroup>
+    
     <ItemGroup>
         <None Include="../../LICENSE" Pack="true" PackagePath="FILES" />
         <None Include="../../README.md" Pack="true" PackagePath="FILES" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="\tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="tools" />
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
     </ItemGroup>
 </Project>
